@@ -17,28 +17,59 @@ public class SoundThread extends Thread
     {
         try
         {
+            File soundFile; AudioInputStream audioIn; Clip clip;
             switch(pixel) {
                 case 0:
                     // Open an audio input stream.           
-                    File soundFile = new File("C:/Users/niklas/workspace/assets/Sound/sound.wav");
-                    AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);              
+                    soundFile = new File("piano_notes/c1.wav");
+                    audioIn = AudioSystem.getAudioInputStream(soundFile);              
                     // Get a sound clip resource.
-                    Clip clip = AudioSystem.getClip();
+                    clip = AudioSystem.getClip();
                     // Open audio clip and load samples from the audio input stream.
                     clip.open(audioIn);
                     clip.start();
                     break;
-                case 1:
+                case 1:         
+                    soundFile = new File("piano_notes/d1.wav");
+                    audioIn = AudioSystem.getAudioInputStream(soundFile);              
+                    clip = AudioSystem.getClip();
+                    clip.open(audioIn);
+                    clip.start();
                     break;
-                case 2: 
+                case 2:
+                    soundFile = new File("piano_notes/e1.wav");
+                    audioIn = AudioSystem.getAudioInputStream(soundFile);              
+                    clip = AudioSystem.getClip();
+                    clip.open(audioIn);
+                    clip.start();
                     break;
                 case 3:
+                    soundFile = new File("piano_notes/f1.wav");
+                    audioIn = AudioSystem.getAudioInputStream(soundFile);              
+                    clip = AudioSystem.getClip();
+                    clip.open(audioIn);
+                    clip.start();
                     break;
                 case 4: 
+                    soundFile = new File("piano_notes/g1.wav");
+                    audioIn = AudioSystem.getAudioInputStream(soundFile);              
+                    clip = AudioSystem.getClip();
+                    clip.open(audioIn);
+                    clip.start();
                     break;
                 case 5:
+                    soundFile = new File("piano_notes/a1.wav");
+                    audioIn = AudioSystem.getAudioInputStream(soundFile);              
+                    clip = AudioSystem.getClip();
+                    clip.open(audioIn);
+                    clip.start();
                     break;
                 case 6:
+                    soundFile = new File("piano_notes/b1.wav");
+                    audioIn = AudioSystem.getAudioInputStream(soundFile);              
+                    clip = AudioSystem.getClip();
+                    clip.open(audioIn);
+                    clip.start();
                     break;  
                 default: 
                     System.out.println("Invalid pixel.");
