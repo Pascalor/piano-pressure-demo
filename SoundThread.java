@@ -10,6 +10,7 @@ public class SoundThread extends Thread
     public SoundThread(int p)
     {
         pixel = p;
+        run();
     }
     
     @Override
@@ -42,6 +43,7 @@ public class SoundThread extends Thread
                     soundFile = new File("piano_notes/b1.wav");
                     break;  
                 default: 
+                    soundFile = null;
                     System.out.println("Invalid pixel.");
                     break;
                 }
